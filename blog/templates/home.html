@@ -1,0 +1,7 @@
+Post
+<ul>
+    {% for post in object_list %}
+        <li><a href= "{% url 'art-detail' post.pk %}" > {{ post.title }}</a> -- {{ post.author }}</li>
+        {{ post.body }}
+    {% endfor %}
+</ul>
